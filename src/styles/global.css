@@ -10,18 +10,23 @@ body {
     width: 768px;
     max-width: 768px;
     background-color: hsl(33, 80%, 92%);
+    font-size: 1.22rem;
 }
 
 h1 {
-    @apply text-2xl mb-2;
+    @apply text-3xl font-black mb-2;
 }
 
 h3 {
-    @apply text-xl mb-1;
+    @apply text-2xl font-bold mb-1;
+}
+
+h4 {
+    @apply text-xl font-bold mb-0.5;
 }
 
 p {
-    text-align: justify;
+    @apply mb-4 text-justify;
 }
 
 a {
@@ -39,4 +44,8 @@ a:hover {
 
 .font-jetbrains {
     font-family: 'JetBrains Monospace', monospace;
+}
+
+.border-bg-gray {
+    border-color: hsl(33, 60%, 88%);
 }
