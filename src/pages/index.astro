@@ -1,0 +1,30 @@
+---
+// import ArticleCard from '../components/ArticleCard.astro';
+import Document from '../layouts/Document.astro'
+
+// TODO: implement the recuperation system on the 3 last element
+// const posts = (await Astro.glob('./posts/*.md')).sort(
+// 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+// );
+---
+
+<Document>
+
+	<section class="intro mb-4">
+		<h1 class="font-black">Salut, moi c'est Cédric 
+			<img class="inline w-8 h-8" src="/svg/hello.svg" alt="hand-emoji">
+		</h1>
+		<p>Bienvenue sur mon site, ici vous trouverez des articles sur la tech., l'administration des systèmes, réseaux, du dev ainsi que tous un tas de billets d'humeur sur des sujets variés.
+		</p>
+		<p class="italic text-gray-400">
+		// attention à la marche en entrant ;)
+		</p>
+	</section>
+
+	<!-- TODO: implement this correctly -->
+	<!-- <section class="last-3-posts">
+		{posts.map( (post) => (
+				<ArticleCard url={post.url} meta={post.frontmatter} />
+		))}
+	</section> -->
+</Document>

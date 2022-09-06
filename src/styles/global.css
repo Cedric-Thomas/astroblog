@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+html {
+    @apply flex justify-center;
+}
+
+body {
+    @apply p-4;
+    font-family: 'Roboto', sans-serif;
+    width: 768px;
+    max-width: 768px;
+    background-color: hsl(33, 80%, 92%);
+}
+
+h1 {
+    @apply text-2xl mb-2;
+}
+
+h3 {
+    @apply text-xl mb-1;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    @apply text-blue-800;
+}
+
+a:hover {
+    @apply text-blue-600;
+}
+
+.vertical {
+    writing-mode: vertical-lr;
+      text-orientation: sideways-right;
+}
+
+.font-jetbrains {
+    font-family: 'JetBrains Monospace', monospace;
+}

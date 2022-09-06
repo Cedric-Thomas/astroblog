@@ -1,0 +1,21 @@
+---
+import Head   from '../components/Head.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+import { SITE_TITLE } from '../config'
+---
+
+<html lang="en">
+	<Head title={SITE_TITLE} />
+	<body>
+		<Header />
+		<div class="flex">
+			<div class="vertical whitespace-nowrap mr-4 font-jetbrains bg-black text-white p-1 pt-4 pb-4 rounded-sm">01001100 01110011 11010000 00001011 00010000 00001100 00001100</div>
+			<main class="">
+				<slot />
+			</main>
+		</div>
+		<Footer />
+	</body>
+</html>

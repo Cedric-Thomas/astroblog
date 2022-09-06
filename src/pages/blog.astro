@@ -1,0 +1,16 @@
+---
+import Document from '../layouts/Document.astro'
+import ArticleCard from '../components/ArticleCard.astro'
+
+const posts = (await Astro.glob('./posts/*.md')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<Document>
+	<section class="posts">
+	{posts.map( (post) => (
+			<ArticleCard url={post.url} meta={post.frontmatter} />
+	))}
+	</section>
+</Document>
