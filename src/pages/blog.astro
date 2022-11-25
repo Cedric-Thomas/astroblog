@@ -1,6 +1,6 @@
 ---
 import Document from '../layouts/Document.astro'
-import ArticleCard from '../components/ArticleCard.astro'
+import BlogPost from '../components/BlogPost.astro'
 
 const posts = (await Astro.glob('./posts/*.md')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
@@ -8,9 +8,9 @@ const posts = (await Astro.glob('./posts/*.md')).sort(
 ---
 
 <Document>
-	<section class="posts">
+	<section class="posts w-full">
 	{posts.map( (post) => (
-			<ArticleCard url={post.url} meta={post.frontmatter} />
+			<BlogPost url={post.url} meta={post.frontmatter} />
 	))}
 	</section>
 </Document>

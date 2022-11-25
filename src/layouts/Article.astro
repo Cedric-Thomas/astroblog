@@ -2,7 +2,6 @@
 import Head   from '../components/Head.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
-import BinaryBanner from '../components/BinaryBanner.astro'
 
 import { SITE_LANG, SITE_TITLE } from '../config'
 ---
@@ -11,11 +10,8 @@ import { SITE_LANG, SITE_TITLE } from '../config'
 	<Head title={SITE_TITLE} />
 	<body>
 		<Header />
-		<main>
-			<div class="flex">
-					<BinaryBanner />
-					<slot />
-			</div>
+		<main class="">
+			<slot />
 		</main>
 		<Footer />
 	</body>

@@ -1,7 +1,7 @@
 ---
 // import ArticleCard from '../components/ArticleCard.astro';
 import Document from '../layouts/Document.astro'
-
+import Icon from '../components/Icon.astro'
 // TODO: implement the recuperation system on the 3 last element
 // const posts = (await Astro.glob('./posts/*.md')).sort(
 // 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
@@ -11,9 +11,7 @@ import Document from '../layouts/Document.astro'
 <Document>
 
 	<section class="intro mb-4">
-		<h1>Salut, moi c'est Cédric 
-			<img class="inline w-8 h-8" src="/svg/hello.svg" alt="hand-emoji">
-		</h1>
+		<h1>Salut, moi c'est Cédric <Icon s="32" emoji="👋" /></h1>
 		<p>
 			Bienvenue sur mon site, ici vous trouverez des articles sur la tech,
 		l'administration des systèmes, réseaux, du dev ainsi que tous un tas 

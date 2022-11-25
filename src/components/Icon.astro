@@ -1,0 +1,35 @@
+---
+export interface Props {
+    emoji: string
+    s?: string
+}
+
+const { emoji, s = "24" } = Astro.props
+
+function emojiToHex(e) {
+    if(e.split("").length > 2) {
+        return "u"+(e.split("")).map(
+        (i) => { 
+            var x = i.codePointAt(0).toString(16)
+            while(x.length < 4) {
+                x = "0" + x
+            }
+            return x
+        }).join("_")
+    } else {
+        return "u"+e.codePointAt(0).toString(16)
+    }
+}
+
+const url = `https://raw.githubusercontent.com/googlefonts/noto-emoji/main/svg/emoji_${emojiToHex(emoji)}.svg`
+---
+
+<svg width={s} height={s}>
+    <image xlink:href={url} width={s} height={s} />
+</svg>
+
+<style>
+    svg {
+        @apply inline;
+    }
+</style>

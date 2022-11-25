@@ -5,12 +5,13 @@ html {
 }
 
 body {
-    @apply p-4;
+    @apply p-4 max-w-screen-md w-full text-lg h-screen;
     font-family: 'Roboto', sans-serif;
-    width: 768px;
-    max-width: 768px;
     background-color: hsl(33, 80%, 92%);
-    font-size: 1.22rem;
+}
+
+main {
+    @apply h-full;
 }
 
 h1 {
@@ -29,21 +30,12 @@ p {
     @apply mb-4 text-justify;
 }
 
-a {
+/* a {
     @apply text-blue-800;
-}
+} */
 
 a:hover {
     @apply text-blue-600;
-}
-
-.vertical {
-    writing-mode: vertical-lr;
-      text-orientation: sideways-right;
-}
-
-.font-jetbrains {
-    font-family: 'JetBrains Monospace', monospace;
 }
 
 .border-bg-gray {

@@ -1,0 +1,54 @@
+---
+import Icon from '../components/Icon.astro'
+
+export interface Props {
+    meta: Record<string, any>,
+    url: string
+}
+
+const { url, meta } = Astro.props
+---
+
+<a href={url}>
+    <div class="icon">
+        <Icon s="64" emoji={meta.emoji}/>
+    </div>
+    <div class="w-full">
+        <div class="">
+            <h3>{meta.title}</h3>
+            <p>{meta.description}</p>
+        </div>
+        <div class="metadata">
+            <div>
+                {meta.author}
+                <Icon emoji="👤" />
+            </div>
+            <div>
+                {meta.pubDate}
+                <Icon emoji="📆" />
+            </div>
+        </div>
+    </div>
+</a>
+
+<style>
+    a {
+        @apply flex mx-auto max-w-xl w-full items-center p-2 rounded text-black border-2;
+        background-color: hsl(33, 80%, 94%);
+        border-color: hsl(33, 50%, 84%);
+    }
+
+    p {
+        @apply text-justify;
+    }
+
+    .icon {
+        @apply rounded-xl border-2 p-4 mx-4 my-2;
+        background-color: hsl(33, 80%, 98%);
+        border-color: hsl(33, 50%, 88%);
+    }
+
+    .metadata {
+        @apply text-right;
+    }
+</style>
