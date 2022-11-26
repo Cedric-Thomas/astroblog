@@ -9,35 +9,34 @@ import Icon from '../components/Icon.astro'
 ---
 
 <Document>
-
-	<section class="intro mb-4">
+	<section class="intro">
 		<h1>Salut, moi c'est Cédric <Icon s="32" emoji="👋" /></h1>
 		<p>
 			Bienvenue sur mon site, ici vous trouverez des articles sur la tech,
 		l'administration des systèmes, réseaux, du dev ainsi que tous un tas 
 		de billets d'humeur sur des sujets variés.
 		</p>
-		<hr class="m-8 border-2 border-bg-gray rounded">
-		<h3 class="mb-4">~Pourquoi 0xcc ?</h3>
-		<p class="mb-2">
+		<hr />
+		<h3>~Pourquoi 0xcc ?</h3>
+		<p>
 			Bonne question ^^, disons que l'on peut voir ca sous plusieurs 
 			angles :
 		</p>
-			<ul class="list-inside list-disc text-justify">
-				<li><h4 class="inline">le site <a href="https://0xcc.fr/">0xcc.fr</a> ?</h4></li>
-				<ul class="list-inside list-disc ml-8 mb-6">
+			<ul>
+				<li><h4>le site <a href="https://0xcc.fr/">0xcc.fr</a> ?</h4></li>
+				<ul>
 					<li>
 						Ce site est apparu dans le but de partager
 						la connaissance sur différents domaines techniques mais
 						aussi dans le but de me servir de mémo personnel parce
 						que savoir c'est bien mais se souvenir c'est mieux (
-						<span class="italic">
+						<i>
 						citation approximative d'un grec pas très connu
-						</span> )
+						</i> )
 					</li>
 				</ul>
-				<li><h4 class="inline">le pseudo <span class="font-jetbrains bg-black text-white p-1 rounded-sm">0xcc</span> ?</h4></li>
-				<ul class="list-inside list-disc ml-8 mb-6">
+				<li><h4>le pseudo <span class="highlight">0xcc</span> ?</h4></li>
+				<ul>
 					<li>
 						Alors j'ai pris les deux "c" dans mon prénom ...,
 						effectivement on peut dire que je me suis pas foulé sur
@@ -55,3 +54,27 @@ import Icon from '../components/Icon.astro'
 		))}
 	</section> -->
 </Document>
+
+<style>
+	.intro {
+		/* margin & padding */
+		@apply mb-4;
+	}
+
+	li > h4 {
+		/* display */
+		@apply inline;
+	}
+
+	.highlight {
+		/* margin & padding */
+		@apply p-1;
+		/* border */
+		@apply bg-black text-white;
+		/* text */
+		@apply rounded-sm;
+		font-family: 'JetBrains Monospace', monospace;
+		/* text & bg color */
+		@apply bg-black text-white;
+	}
+</style>

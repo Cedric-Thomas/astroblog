@@ -4,7 +4,7 @@ body {
     /* display */
     @apply flex flex-col;
     /* size w x h */
-    @apply max-w-screen-lg w-full h-screen;
+    @apply max-w-screen-lg w-full min-h-screen;
     /* margin and padding */
     @apply p-4 m-auto;
     /* text */
@@ -21,30 +21,42 @@ main {
 
 h1 {
     /* margin and padding */
-    @apply mb-2;
+    @apply my-2;
     /* text */
     @apply text-3xl font-black;
 }
 
 h3 {
     /* margin and padding */
-    @apply mb-1;
+    @apply my-1;
     /* text */
     @apply text-2xl font-bold;
 }
 
 h4 {
     /* margin and padding */
-    @apply mb-0.5;
+    @apply my-0.5;
     /* text */
     @apply text-xl font-bold ;
 }
 
 p {
     /* margin and padding */
-    @apply mb-4;
+    @apply my-4;
     /* text */
     @apply text-justify;
+}
+
+ul {
+    /* display */
+    @apply list-inside list-disc; 
+    /* text */
+    @apply text-justify;
+}
+
+ul ul {
+    /* margin and padding */
+    @apply ml-8 mb-6;
 }
 
 a:hover {
@@ -52,8 +64,14 @@ a:hover {
     @apply text-blue-600;
 }
 
+i {
+    /* text */
+    @apply italic;
+}
 hr {
-     /* border */
-     @apply border-t-4;
-     border-color: hsl(33, 60%, 88%);
+    /* margin and padding */
+    @apply m-2;
+    /* border */
+    @apply border-0 border-t-4;
+    border-color: hsl(33, 60%, 88%);
 }
