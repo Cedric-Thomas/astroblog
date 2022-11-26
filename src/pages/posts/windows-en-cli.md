@@ -1,14 +1,13 @@
 ---
 layout: ../../layouts/Article.astro
-title: $1
+title: $2
 description: >
     lorem ipsum sin dolor amet qual adeis par valoteus
     blatiscalutus ratifakahe eroteis sin lo qual deralis.
 author: Cédric THOMAS
 pubDate: Sep 09 2022
-emoji: 🐧
+emoji: 🪟
 ---
 
-# Bonjour !  
-
+Bonjour !  
 Ceci est un **Test**

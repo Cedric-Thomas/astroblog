@@ -1,2 +1,0 @@
-# Astro Starter Kit: Minimal
-

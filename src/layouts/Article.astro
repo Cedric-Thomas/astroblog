@@ -10,8 +10,10 @@ import { SITE_LANG, SITE_TITLE } from '../config'
 	<Head title={SITE_TITLE} />
 	<body>
 		<Header />
-		<main class="">
-			<slot />
+		<main>
+			<article>
+				<slot />
+			</article>
 		</main>
 		<Footer />
 	</body>

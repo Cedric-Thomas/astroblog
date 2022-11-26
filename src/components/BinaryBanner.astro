@@ -1,10 +1,21 @@
 <div>01001100 01110011 11010000 00001011 00010000 00001100 00001100</div>
 
 <style>
-    div {
-        @apply whitespace-nowrap mr-4 bg-black text-white p-1 pt-4 pb-4 rounded-sm;
+    div { /* hidden by default show if screen > sm */
+        /* display */
+        @apply hidden;
+        /* margin and padding */
+        @apply mr-4 p-1 pt-4 pb-4;
+        /* border */
+        @apply rounded-sm;
+        /* text */
+        @apply whitespace-nowrap;
+        font-family: 'JetBrains Monospace', monospace;
         writing-mode: vertical-lr;
         text-orientation: sideways-right;
-        font-family: 'JetBrains Monospace', monospace;
+        /* text & bg color */
+        @apply text-white bg-black;
+        /***~- breakpoint ~-***/
+        @apply sm:block;
     }
 </style>

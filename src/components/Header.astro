@@ -4,15 +4,15 @@
             <span class="">&nbsp;[0x</span>
             <span class="">cc]&nbsp;</span>
         </h1>
-        <div>
+        <div class="menu">
             <a href="/">
-                <span class="p-1 text-xl"><span class="font-bold">/</span>Home</span>
+                <span><span class="font-bold">/</span>Home</span>
             </a>
             <a href="/blog">
-                <span class="p-1 text-xl"><span class="font-bold">/</span>Blog</span>
+                <span><span class="font-bold">/</span>Blog</span>
             </a>
             <a href="/about">
-                <span class="p-1 text-xl"><span class="font-bold">/</span>Me</span>
+                <span><span class="font-bold">/</span>Me</span>
             </a>
         </div>
     </nav>
@@ -52,7 +52,7 @@
         @apply sm:rounded-sm;
     }
 
-    div {
+    .menu {
         /* display */
         @apply flex-1 flex justify-center;
     }
@@ -66,5 +66,12 @@
         @apply rounded-sm;
         /* text & bg-color */
         @apply bg-black text-white;
+    }
+
+    a > span {
+        /* margin & padding */
+        @apply p-1;
+        /* text */
+        @apply text-xl;
     }
 </style>

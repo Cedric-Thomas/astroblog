@@ -1,43 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-html {
-    @apply flex justify-center;
-}
-
 body {
-    @apply p-4 max-w-screen-md w-full text-lg h-screen;
+    /* display */
+    @apply flex flex-col;
+    /* size w x h */
+    @apply max-w-screen-lg w-full h-screen;
+    /* margin and padding */
+    @apply p-4 m-auto;
+    /* text */
+    @apply text-lg justify-center;
     font-family: 'Roboto', sans-serif;
+    /* text & bg color */
     background-color: hsl(33, 80%, 92%);
 }
 
 main {
-    @apply h-full;
+    /* display */
+    @apply flex-1 flex;
 }
 
 h1 {
-    @apply text-3xl font-black mb-2;
+    /* margin and padding */
+    @apply mb-2;
+    /* text */
+    @apply text-3xl font-black;
 }
 
 h3 {
-    @apply text-2xl font-bold mb-1;
+    /* margin and padding */
+    @apply mb-1;
+    /* text */
+    @apply text-2xl font-bold;
 }
 
 h4 {
-    @apply text-xl font-bold mb-0.5;
+    /* margin and padding */
+    @apply mb-0.5;
+    /* text */
+    @apply text-xl font-bold ;
 }
 
 p {
-    @apply mb-4 text-justify;
+    /* margin and padding */
+    @apply mb-4;
+    /* text */
+    @apply text-justify;
 }
 
-/* a {
-    @apply text-blue-800;
-} */
-
 a:hover {
+     /* text & bg color */
     @apply text-blue-600;
 }
 
-.border-bg-gray {
-    border-color: hsl(33, 60%, 88%);
+hr {
+     /* border */
+     @apply border-t-4;
+     border-color: hsl(33, 60%, 88%);
 }
